@@ -12,6 +12,6 @@ curl -o $script_location/tmp/frontend.zip https://roboshop-artifacts.s3.amazonaw
 unzip /tmp/frontend.zip
 ## note : we are switching the location to /usr/share/nginx/html. from this location it looks for the file so we need to comeback again
 
-cp /files/nginx.roboshop.conf /etc/nginx/default.d/roboshop.conf
+cp /files/nginx/roboshop.conf /etc/nginx/default.d/roboshop.conf
 
 systemctl restart nginx
