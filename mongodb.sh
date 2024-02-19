@@ -9,7 +9,7 @@ systemctl start mongod
 
 # edit file in mongod.conf
 
-sed -e -i  's/127.0.0.1/0.0.0.0/i' /etc/mongod.conf
+sed -e -i  's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
 
 cat /etc/mongod.conf
 exit
