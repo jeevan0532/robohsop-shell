@@ -12,5 +12,4 @@ systemctl start mongod
 sed -e -i  's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
 
 cat /etc/mongod.conf
-exit
 systemctl restart mongod
