@@ -9,7 +9,7 @@ systemctl start mongod
 
 pwd 
 ls
-
+cat /etc/mongod.conf
 exit 
 
 # edit file in mongod.conf
