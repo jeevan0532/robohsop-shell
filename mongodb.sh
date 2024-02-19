@@ -8,6 +8,7 @@ systemctl enable mongod
 systemctl start mongod
 
 pwd 
+ls
 
 exit 
 
