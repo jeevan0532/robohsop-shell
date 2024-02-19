@@ -7,7 +7,12 @@ yum install mongodb-org -y
 systemctl enable mongod
 systemctl start mongod
 
-#edit file in mongod.conf
-sed -i -e 's/127.0.0.1/0.0.0.0' /etc/mongod.conf
+pwd 
+
+exit 
+
+# edit file in mongod.conf
+
+sed -e -i 's/127.0.0.1/0.0.0.0' /etc/mongod.conf
 
 systemctl restart mongod
