@@ -1,12 +1,9 @@
 script_location=$(pwd)
 set -e 
 
-curl https://nodejs.org/dist/v12.16.1/node-v12.16.1.tar.gz | tar xz
-cd node-v*
-sudo dnf install gcc-c++ make python2
-./configure
-make -j4
-sudo make install
+dnf module disable nodejs -y
+dnf module enable nodejs:18 -y
+dnf install nodejs -y
 
 useradd roboshop
 mkdir -p /app
