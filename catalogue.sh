@@ -1,9 +1,9 @@
-#!/bin/bash
-
 script_location=$(pwd)
+set -e 
 
-curl -sL https://rpm.nodesource.com/setup_ltx |  bash 
-yum install nodejs -y
+dnf module list nodejs
+dnf module enable nodejs:12
+dnf install nodejs -y
 
 useradd roboshop
 mkdir -p /app
