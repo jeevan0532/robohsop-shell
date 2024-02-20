@@ -12,7 +12,7 @@ rm -rf /usr/share/nginx/html/*
 echo -e "\e[35minstall forntend content\e[0m"
 
 curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
-echo -e "\e[35munzip frontend content\[0m"
+echo -e "\e[35munzip frontend content\e[0m"
 
 cd /usr/share/nginx/html
 unzip /tmp/frontend.zip
