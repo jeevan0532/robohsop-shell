@@ -15,7 +15,7 @@ unzip /tmp/catalogue.zip
 npm install
 
 cp ${script_location}/files/catalogue.service /etc/systemd/system/catalogue.service
-systemctl deamon-reload
+systemctl daemon-reload
 systemctl start catalogue
 systemctl enable catalogue
 
