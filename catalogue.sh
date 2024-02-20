@@ -1,10 +1,8 @@
+#!/bin/bash
+
 script_location=$(pwd)
 
-set -e
-
-
 curl -sL https://rpm.nodesource.com/setup_ltx |  bash 
-
 yum install nodejs -y
 
 useradd roboshop
