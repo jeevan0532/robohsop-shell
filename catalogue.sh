@@ -1,5 +1,4 @@
 script_location=$(pwd)
-set -e 
 
 dnf module disable nodejs -y
 dnf module enable nodejs:18 -y
@@ -19,3 +18,7 @@ cp ${script_location}/files/catalogue.service /etc/systemd/system/catalogue.serv
 systemctl deamon-reload
 systemctl start catalogue
 systemctl enable catalogue
+
+cp ${script_location}/tmp/mongodb.repo /etc/yum.repos.d/mongodb.repo
+yum install mongodb-org-shell -y
+mongo --host localhost </app/schema/catalogue.js
