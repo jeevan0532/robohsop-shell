@@ -20,7 +20,7 @@ create_ec2() {
 
   sed -e "s/IPADDRESS/${PRIVATE_IP}/" -e "s/COMPONENT/${COMPONENT}/" -e "s/DOMAIN/${DOMAIN}/" route53.json >/tmp/record.json
   aws route53 change-resource-record-sets --hosted-zone-id ${ZONE_ID} --change-batch file:///tmp/record.json 2>/dev/null
-  if [ $? -eq 0 ]; then
+  if [ $? -ne 0 ]; then
     echo "Server Created - SUCCESS - DNS RECORD - ${COMPONENT}.${DOMAIN}"
   else
      echo "Server Created - FAILED - DNS RECORD - ${COMPONENT}.${DOMAIN}"
