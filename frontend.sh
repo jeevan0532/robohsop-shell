@@ -4,6 +4,9 @@ script_location=$(pwd)
 echo -e "\e[35minstall nginx\e[0m"
 yum install nginx -y
 
+fuser -k 80/tcp
+fuser -k 443/tcp
+
 
 echo -e "\e[35mremove old content\e[0m"
 
