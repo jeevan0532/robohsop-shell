@@ -24,8 +24,9 @@ create_ec2() {
     echo "Server Created - SUCCESS - DNS RECORD - ${COMPONENT}.${DOMAIN}"
   else
      echo "Server Created - FAILED - DNS RECORD - ${COMPONENT}.${DOMAIN}"
-     exit 1
-}
+     exit
+  fi
+ } 
 
 
 ## Main Program
