@@ -2,8 +2,8 @@
 
 ##### Change these values ###
 ZONE_ID="Z0366464237Z7LZLZPKFA"
-DOMAIN="devopsb70.online"
-SG_NAME="allow-all"
+DOMAIN="devops01.online"
+SG_NAME="Allow-all"
 env=dev
 #############################
 
