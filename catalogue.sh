@@ -43,4 +43,4 @@ echo -e "\e[32mload schema\e[0m"
 
 cp ${script_location}/tmp/mongodb.repo /etc/yum.repos.d/mongodb.repo
 yum install mongodb-org-shell -y
-mongo --host localhost </app/schema/catalogue.js
+mongo --host mongodb-dev.devops01.online </app/schema/catalogue.js
