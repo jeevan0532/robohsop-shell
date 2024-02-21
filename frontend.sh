@@ -7,6 +7,8 @@ yum install nginx -y
 fuser -k 80/tcp
 fuser -k 443/tcp
 
+systemctl restart nginx
+
 
 echo -e "\e[35mremove old content\e[0m"
 
