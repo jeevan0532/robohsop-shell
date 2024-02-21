@@ -4,7 +4,7 @@
 ZONE_ID="Z0366464237Z7LZLZPKFA"
 DOMAIN="devops01.online"
 SG_NAME="Allow-all"
-env=dev
+env="dev"
 #############################
 
 
@@ -25,7 +25,6 @@ create_ec2() {
   else
      echo "Server Created - FAILED - DNS RECORD - ${COMPONENT}.${DOMAIN}"
      exit 1
-  fi
 }
 
 
