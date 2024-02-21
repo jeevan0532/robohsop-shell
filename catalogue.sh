@@ -31,7 +31,7 @@ npm install
 
 echo -e "\e[32msetting up catalogue service file\e[0m"
 
-cp ${script_location}/files/catalogue.service /e0tc/systemd/system/catalogue.service
+cp ${script_location}/files/catalogue.service /etc/systemd/system/catalogue.service
 
 echo -e "\e[32minstalling,enabling and starting catalogue\e[0m"
 
