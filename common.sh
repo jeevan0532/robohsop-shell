@@ -14,5 +14,5 @@ status_check() {
 
 
 print() {
-echo -e "\e[1m \e[0m"
+  echo -e "\e[1m  \e[0m"
 }
