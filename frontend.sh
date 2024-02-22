@@ -4,14 +4,14 @@ log=/tmp/roboshop.log
 set -e
 
 status_check() {
-if [ $? -eq 0 ]; then
-        echo -e "\e[31m success\e[0m"
-else
-        echo -e "\e[31m failure\e[0m"
+ if [ $? -eq 0 ]; then
+        echo -e "\e[32msuccess\e[0m"
+ else
+        echo -e "\e[33mfailure\e[0m"
 	echo "failure, refer to the log-${log}"
 	exit
-fi
-
+ fi
+}
 echo -e "\e[35minstall nginx\e[0m"
 yum install nginx -y &>>${log}
 status_check
@@ -41,4 +41,3 @@ status_check
 echo -e "\e[35mstart nginx\e[0m"
 systemctl restart nginx &>>${log}
 status_check
-
