@@ -7,9 +7,9 @@ yum install nginx -y &>>${log}
 echo $?
 
 if [ $? -eq 0 ]; then
-	success
+	echo success
 else
-	failure
+	echo failure
 fi
 
 echo -e "\e[35mremove old content\e[0m"
