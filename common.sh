@@ -13,6 +13,6 @@ status_check() {
 }
 
 
-print() {
+print_head() {
   echo -e "\e[1m  \e[0m"
 }
