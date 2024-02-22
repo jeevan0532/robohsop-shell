@@ -1,17 +1,5 @@
-#!/bin/bash
-script_location=$(pwd)
-log=/tmp/roboshop.log
-set -e
+source common.sh
 
-status_check() {
- if [ $? -eq 0 ]; then
-        echo -e "\e[32msuccess\e[0m"
- else
-        echo -e "\e[33mfailure\e[0m"
-	echo "failure, refer to the log-${log}"
-	exit
- fi
-}
 echo -e "\e[35minstall nginx\e[0m"
 yum install nginx -y &>>${log}
 status_check
