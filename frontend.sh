@@ -1,6 +1,6 @@
 source common.sh
 
-echo -e "\e[35minstall nginx\e[0m"
+print "install nginx"
 yum install nginx -y &>>${log}
 status_check
 
