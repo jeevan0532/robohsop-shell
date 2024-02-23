@@ -69,10 +69,11 @@ nodejs(){
  systemctl enable ${component} &>>${log}
  status_check
 
-
- echo -e "\e[32mload schema\e[0m"
- cp ${script_location}/files/mongodb.repo /etc/yum.repos.d/mongodb.repo &>>${log}
- yum install mongodb-org-shell -y &>>${log}
- mongo --host 172.31.6.13 < /app/schema/${component}.js &>>${log}
- status_check
+ if [ $schema_load == true ]; then
+  echo -e "\e[32mload schema\e[0m"
+  cp ${script_location}/files/mongodb.repo /etc/yum.repos.d/mongodb.repo &>>${log}
+  yum install mongodb-org-shell -y &>>${log}
+  mongo --host 172.31.6.13 < /app/schema/${component}.js &>>${log}
+  status_check
+ fi
 }
