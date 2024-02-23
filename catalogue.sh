@@ -7,7 +7,10 @@ dnf install nodejs -y &>>${log}
 status_check
 
 echo -e "\e[32madd user\e[0m"
-useradd roboshop &>>${log}
+id roboshop
+if [ $? -ne 0 ]; then
+ useradd roboshop &>>${log}
+fi
 status_check
 
 
