@@ -1,6 +1,6 @@
 source common.sh
 
 
-componet=user
+component=user
 
 nodejs
