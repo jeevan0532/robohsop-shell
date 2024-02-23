@@ -1,4 +1,4 @@
-source=sommon.sh
+source=common.sh
 
 component=cart
 
