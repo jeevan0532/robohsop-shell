@@ -55,7 +55,7 @@ status_check
 echo -e "\e[32mload schema\e[0m"
 cp ${script_location}/files/mongodb.repo /etc/yum.repos.d/mongodb.repo &>>${log}
 yum install mongodb-org-shell -y &>>${log}
-mongo --host mongodb-dev.devops01.online </app/schema/catalogue.js &>>${log}
+mongo --host mongodb-dev.devops01.online < /app/schema/catalogue.js &>>${log}
 status_check
 
 
