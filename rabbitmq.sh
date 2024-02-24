@@ -25,7 +25,10 @@ status_check
 
 
 print_head "add user and password"
-rabbitmqctl add_user roboshop ${rabbitmq_pass}
+rabbitmqctl list_users | grep roboshop
+if [ $? -ne 0 ]; then
+ rabbitmqctl add_user roboshop ${rabbitmq_pass}
+fi
 rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"
 status_check
 
