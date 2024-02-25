@@ -113,7 +113,19 @@ nodejs(){
  mvn clean package
  mv target/$component-1.0.jar $component.jar
  status_check
- 
- 
- 
+ }
+
+python() {
+ print_head "install python 3.6"
+ dnf install python36 gcc python3-devel -y
+ status_check
+
+ app_prereq
+
+ print_head "download dependencies"
+ cd /app
+ pip3.6 install -r requirements.txt
+ status_check
+
+ systemd_setup
 }
