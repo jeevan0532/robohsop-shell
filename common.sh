@@ -126,6 +126,10 @@ python() {
  cd /app
  pip3.6 install -r requirements.txt
  status_check
+ 
+ print_update "update password in service file"
+ sed -i -e "s/rabbitmq_pass/${rabbitmq_pass}/" files/${component}.service &>>$log
+ status_check
 
  systemd_setup
 }
