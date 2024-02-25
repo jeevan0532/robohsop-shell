@@ -1,6 +1,6 @@
 source common.sh
 
-if [ -z "s${rabbitmq_pass}" ]; then
+if [ -z "${rabbitmq_pass}" ]; then
 	echo "rabbitmq pass is missing"
 fi
 
